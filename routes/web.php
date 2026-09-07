@@ -8,7 +8,7 @@ Route::get('/', function () {
 });
 
 Route::get('/whoami', function () {
-    return 'Jewel Coranez | 2023-80129 | Block 4C | ITRACKB4 Laravel 12';
+    return 'Jewel Coranez | Block 4C | ITRACKB4 Laravel 12';
 });
 
 Route::get('/books', [BookController::class, 'index'])->name('books.index');
