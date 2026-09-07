@@ -1,11 +1,17 @@
-<h1>{{ $book['title'] }}</h1>
+@extends('layouts.app')
 
-<p>ID: {{ $book['id'] }}</p>
-<p>Title: {{ $book['title'] }}</p>
-<p>Author: {{ $book['author'] }}</p>
-<p>Genre: {{ $book['genre'] }}</p>
-<p>Year: {{ $book['year'] }}</p>
+@section('title', $book['title'])
 
+@section('content')
 
+    <h2>{{ $book['title'] }}</h2>
 
-<a href="{{ route('books.index') }}">Back to list</a>
+    <p>ID: {{ $book['id'] }}</p>
+    <p>Title: {{ $book['title'] }}</p>
+    <p>Author: {{ $book['author'] }}</p>
+    <p>Genre: {{ $book['genre'] }}</p>
+    <p>Year: {{ $book['year'] }}</p>
+
+    <a href="{{ route('books.index') }}">Back</a>
+
+@endsection
